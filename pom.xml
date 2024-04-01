@@ -43,7 +43,7 @@
 	</dependencies>
 	<build>
 		<plugins>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.13.0</version>
@@ -51,7 +51,27 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin> -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+			      <groupId>com.heroku.sdk</groupId>
+			      <artifactId>heroku-maven-plugin</artifactId>
+			      <version>2.0.3</version>
+			      <configuration>
+			          <appName>thymeleaf-super-store</appName>
+			          <includeTarget>false</includeTarget>
+			          <includes>
+			              <include>${project.build.directory}/${project.build.finalName}.jar</include>
+			          </includes>
+			          <jdkVersion>${java.version}</jdkVersion>
+			          <processTypes>
+			              <web>java $JAVA_OPTS -jar ${project.build.directory}/${project.build.finalName}.jar</web>
+			          </processTypes>
+			      </configuration>
+			  </plugin>
 		</plugins>
 	</build>
 </project>
