@@ -1,0 +1,31 @@
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    gap: 1rem;
+}
+
+.formWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input,select{
+    height: 2rem;
+    border-radius: 5px;
+    background-color: aliceblue;
+    color: black;
+}
+
+button{
+    border: 0;
+    border-radius: 3px;
+    background-color: rgb(84, 144, 196);
+    width: 10rem;
+    height: 2rem;
+    align-self: center;
+    color: black;
+}

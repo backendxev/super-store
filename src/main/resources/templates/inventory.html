@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inventory</title>
+        <link rel="stylesheet" th:href="@{/inventory.css}">
+        <link rel="stylesheet" th:href="@{/global.css}">
+    </head>
+    <body>
+        <nav>
+            <a th:href="@{/}">Form</a>
+            <a th:href="@{/inventory}">Inventory</a>
+        </nav>  
+        <div class="tableWrapper">
+            <p class="flashMessage" th:if="${message != null}" th:text="${message}"></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th> 
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Discount</th>
+                        <th>Order date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="product: ${inventory}">
+                        <td th:text="${product.category}"></td>
+                        <td th:text="${product.name}"></td>
+                        <td th:text="${product.price}"></td>
+                        <td th:text="${product.discount}"></td>
+                        <td th:text="${product.date}"></td>
+                        <td><a th:href="@{/(id = ${product.id})}">Update</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

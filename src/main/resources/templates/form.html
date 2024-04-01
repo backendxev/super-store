@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" th:href="@{/form.css}">
+        <link rel="stylesheet" th:href="@{/global.css}">
+    </head>
+    <body>
+        <nav>
+            <a th:href="@{/}">Form</a>
+            <a th:href="@{/inventory}">Inventory</a>
+        </nav>
+        <div class="formWrapper">
+            <h1>Global SuperStore</h1>
+            <form method="POST" th:object="${product}" th:action="@{/handleForm}">
+                <input type="hidden" th:field="*{id}">
+                <label>Category</label>
+                <select th:field="*{category}">
+                    <option value="" disabled selected>Choose an option</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Office Supplies">Office Supplies</option>
+                    <option value="Technology">Technology</option>
+                </select>
+                <input type="text" placeholder="Name" th:field="*{name}">
+                <input type="number" placeholder="Price" th:field="*{price}">
+                <input type="number" placeholder="Discount" th:field="*{discount}">
+                <label>Order date</label>
+                <input type="date" th:field="*{date}">
+                <button type="submit">Submit item</button>
+            </form>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,31 @@
+.flashMessage{
+    background-color: rgb(121, 225, 121);
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    color: black;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tableWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+}

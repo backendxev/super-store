@@ -1,0 +1,26 @@
+*{
+    background-color: rgb(57, 57, 62);
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+h1{
+    font-size: 3rem;
+    color:rgb(173, 216, 230);
+}
+
+nav{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a{
+    color:rgb(173, 216, 230);
+}
+
+table, th, td {
+    border: 1px solid;
+  }
