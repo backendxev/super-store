@@ -1,9 +1,8 @@
 # SuperGlobal Store
 
 My first spring boot project.
-Project URL: https://thymeleaf-super-store-363b0ddeeb31.herokuapp.com
 
-The project is very simple but I have learned many things: 
+Things I've learned:
 
 1. How to configure VSCode for SpringBoot development
 2. Spring Boot Initializr
@@ -29,4 +28,6 @@ The project is very simple but I have learned many things:
     - Others
 9. Spring Boot Flash Attributes (Post-Redirect-Get Pattern)
 10. Debugging (VSCode Breakpoints)
-11. Deploying My App Via Heroku
+11. Deploying an Spring Boot App Via Heroku
+
+App URL in About section. 
